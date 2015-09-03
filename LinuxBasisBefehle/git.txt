@@ -1,0 +1,19 @@
+Initialisieren:   
+	a. auf github Account und repository anlegen   
+	b. lokales Repository anlegen     
+		mkdir git_repos     
+		cd git_repos     
+		git init   
+	c. konfiguration     
+		git config --global user.name "user_von_github"     
+		git config --global user.email "user_von_github@gmx.de"
+			# --global: gilt für alle zukünftigen Repos auf diesem Rechner
+		git conifg --global credential.helper 'cache --timeout=36000'
+	d. Verbinden Remote - Lokal
+		gib remote add origin https://github.com/Halzabschneider/FIT4AF.git
+
+Daten synchronisieren
+	a. ins Verzeichnis git_repos navigieren
+	b. git add . -A
+	c. git comiit -am "Beschreibung der Änderungen"
+	d. git push origin master

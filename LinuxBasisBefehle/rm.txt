@@ -1,0 +1,9 @@
+der Befehl löscht Dateien und Ordner
+
+rm Dateiname
+-> löscht die Datei mit dem Dateinamen
+
+rm -rf Ordnername
+	# -r: bedeutet rekursive, also inklusive aller Unterornder
+	# -f: unterdrückt jede bestätigende nachfrage
+
