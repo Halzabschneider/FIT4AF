@@ -1,0 +1,74 @@
+Wie wird der Ruby Code ausgeführt?
+
+	# In der Linux Konsole den Befehl: <irb>eingeben. 
+		# gut geeignet für die Programmierung.
+		# es startet eine Ruby-Konsole die alle Ruby Befehle kennt.
+	exit
+		# beenden der Ruby-Console und Rückkehr zur Linux-Bash
+	
+	# Als Hilfe und unterstützung Programm Zeal nutzen (zugelassen bei Klassenarbeiten und bei der Prüfung)
+
+_________________________
+
+Skripting über reine Textdatei
+
+	#ruby code in einer Textdatei schreiben und dann mit der Endung .rb speichern. 
+		# Beispiel hello_world.rb
+			~der Befehl wird in der Linux-Bash ausgeführt.
+
+__________________________
+
+Ausgabe erzeugen.
+
+Soll auf der Kosole (Standartausgabe ) eine Ausgabe erzeugt werden, geschieht dies über den Befehl:
+	# puts "irgendwas"
+
+	# var "und noch mehr"
+		puts var
+
+	#	zahl = 15
+		puts zahl.to_s --> ein Nicht-String sollte vor der Ausgabe in einen String konvertiert werden, d.h. die to_s Methode sollte angewendet werden.
+
+________________________
+
+Zusammengesetzte Ausgabe:
+	
+	var = "Heute ist Tag"
+	zahl = 15
+	puts var + " " + zahl.to_s
+
+	puts "#{var} #{zahl}"
+		# Am Anfang und am Ende müssen doppelte anführungszeichen stehen
+		# innerhalb des Kostruktes #{} wird jeder Ruby-Code ausgeführt. Es findet eine automatische Konvertierung in einem String statt.
+
+________________________
+
+Ausgabe formatieren:
+	puts "Die \"Woche\" besteht aus:\n\tMontag\n\tDienstag."
+		# \n fügt einen Zeilenumbruch hinzu
+		# \t fügt einen Tabulatorschritt hinzu
+		# \" maskiert die doppelten Anführungszeichen, sodass diese nicht als Stringende inerterpretiert werden, sonder angezeigt werden können.
+
+
+____________________________________
+______________________________________
+
+Variablen
+
+Zuweisung:
+	var_name = "Dies ist ein String"
+		# eine Zuweisung erfolgt über den Zuweisungsoperator "="
+		# der Datentyp erfolgt implizit über den Wert (String, Ganze Zahl, Datum) 
+
+	Zeichenkette (String)
+		str = "So und so"
+		str2 = 'es geht auch anders'
+		str3 = String.new("noch anders, ganz professionell")
+		#Eine Zeichenkette muss mit öffnenden und schließenden Anführungszeichen eingegeben werden.
+
+	Ganze Zahl ( integer, Fixnum )
+		zahl = 15
+		# KeinAnführungszeichen
+
+	Float (Kommazahl)
+		komma_zahl = 9.18
