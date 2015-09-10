@@ -90,5 +90,8 @@ String Methode:
 		var.reverse! 
 			Ein ! am Ende einer Methode ändert den Variablen Wert (bleibt für immer so!)
 		var.center(30)
-			Methoden erwarten manchmal einen Parameter (wird zentral in dem Angegebenen Wert plaziert!)
-		
+			Methoden erwarten manchmal einen Parameter (center -->wird zentral in dem Angegebenen Wert plaziert!)
+		var.reverse.center(30)
+			Methoden können kaskadiert werden. die folgende Methode wird auf die Ausgabe der vorherigen angewandt.
+		var.empty?
+			Methoden mit einem ? am Ende geben prinzipiell einen Boolean(true oder Flase) zurück.
