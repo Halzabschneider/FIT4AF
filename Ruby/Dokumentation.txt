@@ -72,3 +72,23 @@ Zuweisung:
 
 	Float (Kommazahl)
 		komma_zahl = 9.18
+
+_________________________
+_________________________
+
+String Methode:
+
+	Die Programmiersprache RUBY ist streng Klassen/Objekt orientiert. 
+	Das bedeutet, dass eine Variable von Datentyp Integer ein Objekt der Klasse Fixnum ist, usw.
+	Die jeweilige Klasse bietet für das Objekt vorgefertigte Methoden an.
+
+		var = "teststring"
+		var.class
+			die Methode class auf das Objekt angewand gibt die Klasse des Objektes aus.
+		var.reverse
+			Die Anwendung der Methode Reverse erzeugt eine Ausgabe in der der String umgekehrt wird. Der Wert der Variable ändert sich nicht!
+		var.reverse! 
+			Ein ! am Ende einer Methode ändert den Variablen Wert (bleibt für immer so!)
+		var.center(30)
+			Methoden erwarten manchmal einen Parameter (wird zentral in dem Angegebenen Wert plaziert!)
+		
