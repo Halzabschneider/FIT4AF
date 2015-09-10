@@ -95,3 +95,4 @@ String Methode:
 			Methoden können kaskadiert werden. die folgende Methode wird auf die Ausgabe der vorherigen angewandt.
 		var.empty?
 			Methoden mit einem ? am Ende geben prinzipiell einen Boolean(true oder Flase) zurück.
+			

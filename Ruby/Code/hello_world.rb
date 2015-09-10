@@ -6,3 +6,4 @@ var3 = 1
 puts var + " " + var2 + var3.to_s
 
 puts "#{var} #{Time.new} #{var3}"
+
