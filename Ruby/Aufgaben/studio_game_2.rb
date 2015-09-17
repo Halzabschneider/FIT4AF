@@ -3,8 +3,7 @@ def say_hello(name,health=100)
 end
 
 def time
-		aktuelle_zeit = Time.new
-		nur_Uhrzeit = aktuelle_zeit.strftime("%T")
+		aktuelle_zeit = Time.new.strftime("%R")		
 end
 
 
