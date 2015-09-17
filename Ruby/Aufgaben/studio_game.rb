@@ -24,10 +24,16 @@ puts "#{var_name2} has a health of #{var_health_c}."
 
 var_Moe = 'Moe has a health of 100'
 
+
+
 puts "#{var_Moe.center(50, "*")}\n" *2
 
-puts "Shemp......................... 90 health\n" * 2
-puts "Players: \n\t#{var_name1} \n\t#{var_name2} \n\t#{var_name3}\n\t"
-var_t = Time.httpdate
+#puts "Shemp......................... 90 health\n" * 2
 
-puts "The game started on #{var_t}"
+puts "#{var_name3.ljust(30, ".")} #{var_health_m} health"
+
+
+
+puts "Players: \n\t#{var_name1} \n\t#{var_name2} \n\t#{var_name3}\n\t"
+
+puts "The game started at Thursday #{Time.now}"
