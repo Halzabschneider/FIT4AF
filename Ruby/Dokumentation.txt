@@ -96,3 +96,35 @@ String Methode:
 		var.empty?
 			Methoden mit einem ? am Ende geben prinzipiell einen Boolean(true oder Flase) zurück.
 			
+_______________________________________________
+________________________________________________
+
+class Eigenschaften.
+
+Eine Klasse enthält Methoden und Eigenschaften
+Die Eigenschaft charakterisiert ein Objekt.
+In der Klasse selbst ist die Eigenschaft als Instalnzvariable definiert; dh. es kann auf diese Variable nur innerhalb der Klasse zugegriffen werden.
+soll ein zugriff auch von außerhalb erfolgen, dann wird die Instanzvariable zu einer Eigenschaft.
+
+Beispiell und Methoden:
+	a. Methoden definieren:
+			Def title
+				@title
+			End
+			def title=(ptitle)
+				@title = ptitle
+			end
+			#nun kann von außen auf die Eigenschaft title zugegriffen werden.
+			#obj = Movie.new('Batman')
+			#puts obj.title						#gibt den Wert aus
+			#obj.title = "Superman" 	#belegt die Eigenschaft neu.
+
+	b. Shortcuts
+	attr_accessor :title
+		#falls die Eigenschaft sowohl gelesen, als auch geschrieben werden soll
+	
+	attr_reader :title
+		#nur ein Lese_Zugriff
+
+	attr_writer :title
+		#nur ein Schreib_Zugriff.
