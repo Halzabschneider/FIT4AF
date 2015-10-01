@@ -29,17 +29,9 @@ player1 = Player.new("Nicolas", 40)
 player2 = Player.new("Kevin")
 #puts player2
 
-player3 = Player.new("Yannik")
 
 player2.blam
 puts player2
 
 player1.w00t
 puts player1
-
-players = [player1, player2, player3]
-
-players.each do |player|
-		puts player
-	end
-

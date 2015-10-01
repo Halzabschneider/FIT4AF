@@ -15,10 +15,13 @@
 
 jahreszeiten =["Sommer", "Herbst", "Winter"] #langform für den Aufruf eines Arrays
 jahreszeiten.size #anzahl Inhalte eines arrays ausgeben
+jahreszeiten.count #zählen wie viele inhalte in dem array angegeben sind!
 jahreszeiten.reverse # reihenfolge drehen. (umgekehrt)
 jahreszeiten[1] #gibt den inhalt nummer 2 in dem array aus (bei 0 wird angefangen zu zählen.)
 jahreszeiten =%w(Sommer Herbst Winter) #kurzform für den Aufruf eines Arrays
-
+jahreszeiten << "Fruehling" #hinzufügen eines neuen inhaltes in das angegebene array
+jahreszeiten.pop #löschen des letzten eintrags des arrays
+jahreszeiten.delete ("Fruehling") #genauen inhalt aus dem arrays entfernen.
 jahreszeiten.join(" und ") #ziwschen die Einzellnen Arrays soll ein "und" eingefügt werden.
 
 player =%w(Nicolas, Kevin, Yannik)
