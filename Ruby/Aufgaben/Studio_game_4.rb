@@ -51,13 +51,14 @@ puts player1.health
 
 puts player1.score
 
-#Aufruf von einem Array. Als erstes Deklariert welchen Inhalt in dem Array enhalten sein soll[Zeile 56]
+#Aufruf von einem Array. Als erstes Deklariert welchen Inhalt in dem Array enhalten sein 
+#soll[Zeile 56]
 #Zeile 59 aufruf der Schleife und der einzellnen Player
 #zeile 62 Ausgabe der davor im Array eingegeben Inhalte.
 #Zeile 63 end 
-
+#das folgende gehört schon zu Aufgabe 5 Thema arrays
 players = [player1, player2, player3]
-
+	puts "Now are #{players.size} players online!!"
 players.each do |player|
 		puts player
 	end
