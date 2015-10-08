@@ -8,11 +8,13 @@ require "/home/pan/Dokumente/eup_fit4af/Ruby/Aufgaben/Studio_game_4.rb"
 game = Game.new("Knuckleheads")
 
 player1 = Player.new("Moe")
-game.add_player(player1)
 player2 = Player.new("Larry", 60)
-game.add_player(player2)
 player3 = Player.new("Curly", 125)
-game.add_player(player3)
+
+players = [player1, player2, player3] #Variable Setzten
+players.each do |player|
+	game.add_player(player) #mit einer Schleife die einzelnen Player zu dem Attribut Player hinzufügen
+end
 
 game.play
 
