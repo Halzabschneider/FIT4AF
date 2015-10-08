@@ -1,6 +1,8 @@
-# a. erstellen Sie eine Klasse Game mit einem Konstruktor, der eine Instanzvariable title anlegt und fuellt und 
+# a. erstellen Sie eine Klasse Game mit einem Konstruktor, der eine 
+#Instanzvariable title anlegt und fuellt und 
 # => ein leeres Array mit dem Name Player enthaelt.
-# b. die Klasse Game hat eine Methode add_player der ein SPieler hinzugefuegt wird
+# b. die Klasse Game hat eine Methode add_player der ein SPieler 
+#hinzugefuegt wird
 # c. eine Methode play erzeugt folgenden Ausdruck:
 # 	There are 3 players in Knuckleheads: 
 # 	I'm Moe with a health of 100 and a score of 103.
@@ -21,15 +23,29 @@
 
 class Game
 
-	attr_reader :title, :player
+	attr_accessor :title, :player
 
 		def initialize(title)
 			@title = title
 			@player = []
 		end
+		
 		def add_player(new_player)
 			@player << new_player
 		end
+		def play
+			puts "There are #{@player.size} players in #{@title}:"
+		@player.each do |players|
+			puts players
+		end
+		@player.each do |players|
+			players.blam
+			players.w00t
+			players.w00t
+			puts players
+		end	
+		end
+
 		
 end
 
