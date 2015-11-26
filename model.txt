@@ -4,3 +4,8 @@ Anlegen eines neuen Datensatzes:
 
 	Event.create(name: "Beatles", location: "Manchaster", price: 10.00) 
 	#andere Möglichkeit
+
+Ausgeben von Datensätzen:
+	Event.all
+		#gibt alle Datensätze aus, die in der Tabelle vorhanden sind.
+		
