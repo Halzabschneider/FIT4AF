@@ -1,13 +1,20 @@
-<h1>Movies</h1>
+
+<%if @movies.size >= 1 %>
+		<h1>Movies</h1>
+	<%else %>
+		<h1>Movie</h1>
+	<%end %>
 
 <table border="1">
 	<tr>
 
+
 		<th>Title</th>
 		<th>Rating</th>
-		<th>Kosten</th>
+		<th>Umsatz</th>
 		<th>Beschreibung</th>
 		<th>Erscheinungsdatum</th>
+		<th>Einzelheiten</th>
 
 
 	</tr>
@@ -15,9 +22,10 @@
 		<tr>
 			<td>	<%= movie.title %> </td>
 			<td>	<%= movie.rating %> </td>
-			<td>	<%= movie.total_gross %> </td>
-			<td>	<%= movie.description %> </td>
+			<td>	<%= format_total_gross(movie) %> </td>
+			<td>	<%= format_movie_description(movie) %> </td>
 			<td>	<%= movie.released_on %> </td>
+			<td>  <%= link_to "Zeigen", movie_path(movie.id) %></td>
 		</tr>
 		<% end %>
 </table>
