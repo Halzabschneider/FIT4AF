@@ -1,0 +1,5 @@
+ACTIONS:
+	im zusammenhang mit Formularen kennt Rails 4 Actions:
+		new: ein neuer Event wird im Kontroller erstellt und an eine Webtemplate views/event/new.html.erb weitergeleitet.
+		create: die Daten eines neu erstellter Events werden zur create Action geleitet und dort in der Datenbank gespeichert.
+		edit: ein vorhandener Event wird in der Action Edit und dann im Template  
