@@ -8,4 +8,34 @@ Anlegen eines neuen Datensatzes:
 Ausgeben von Datensätzen:
 	Event.all
 		#gibt alle Datensätze aus, die in der Tabelle vorhanden sind.
-		
+
+	Event.first 
+		#gibt den ersten Datensatz aus
+
+	Event.last
+		#gibt den letzten Datensatz aus
+
+	Event.find_by(name: "NAME")
+		#gibt das Event aus dessen name gesucht wird.
+
+
+Methoden im Model:
+	Es gibt 2 Arten von methoden.
+	Die sogenannten Klassenmethoden, die mit dem Modelnamen aufgerufen werden,
+	und die Objektmethoden, die mit einer Instanz der Klasse aufgerufen werden. 
+	Beispiel: Klassenmethode:
+		Aufruf (im Controller): 
+			@event = Event.upcoming
+		Definition (im Model):
+			def self.upcoming
+				where("start_at > ?", Time.now)
+			end
+
+	Beispiel Objektmethode:
+		Aufruf (im view, Im Controller):
+			@event = Event.find(2)
+			@event.free?
+		Definition (im Model)
+			def free?
+				self.price.blank?
+			end

@@ -2,7 +2,7 @@ module ApplicationHelper
 
 	def format_movie_description(movie)
 		if movie.description.length > 40
-			truncate(movie.description, length: 40, separator: ' ', omission: '...') #omission: gibt an was nach der Erreichten länge stehen soll. eingabe zählt zu der maximalen anzahl dazu
+			truncate(movie.description, length: 40, separator: ' ', omission: ' ...') #omission: gibt an was nach der Erreichten länge stehen soll. eingabe zählt zu der maximalen anzahl dazu
 		else
 			movie.description
 		end 
