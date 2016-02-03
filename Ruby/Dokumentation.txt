@@ -1,0 +1,130 @@
+Wie wird der Ruby Code ausgeführt?
+
+	# In der Linux Konsole den Befehl: <irb>eingeben. 
+		# gut geeignet für die Programmierung.
+		# es startet eine Ruby-Konsole die alle Ruby Befehle kennt.
+	exit
+		# beenden der Ruby-Console und Rückkehr zur Linux-Bash
+	
+	# Als Hilfe und unterstützung Programm Zeal nutzen (zugelassen bei Klassenarbeiten und bei der Prüfung)
+
+_________________________
+
+Skripting über reine Textdatei
+
+	#ruby code in einer Textdatei schreiben und dann mit der Endung .rb speichern. 
+		# Beispiel hello_world.rb
+			~der Befehl wird in der Linux-Bash ausgeführt.
+
+__________________________
+
+Ausgabe erzeugen.
+
+Soll auf der Kosole (Standartausgabe ) eine Ausgabe erzeugt werden, geschieht dies über den Befehl:
+	# puts "irgendwas"
+
+	# var "und noch mehr"
+		puts var
+
+	#	zahl = 15
+		puts zahl.to_s --> ein Nicht-String sollte vor der Ausgabe in einen String konvertiert werden, d.h. die to_s Methode sollte angewendet werden.
+
+________________________
+
+Zusammengesetzte Ausgabe:
+	
+	var = "Heute ist Tag"
+	zahl = 15
+	puts var + " " + zahl.to_s
+
+	puts "#{var} #{zahl}"
+		# Am Anfang und am Ende müssen doppelte anführungszeichen stehen
+		# innerhalb des Kostruktes #{} wird jeder Ruby-Code ausgeführt. Es findet eine automatische Konvertierung in einem String statt.
+
+________________________
+
+Ausgabe formatieren:
+	puts "Die \"Woche\" besteht aus:\n\tMontag\n\tDienstag."
+		# \n fügt einen Zeilenumbruch hinzu
+		# \t fügt einen Tabulatorschritt hinzu
+		# \" maskiert die doppelten Anführungszeichen, sodass diese nicht als Stringende inerterpretiert werden, sonder angezeigt werden können.
+
+
+____________________________________
+______________________________________
+
+Variablen
+
+Zuweisung:
+	var_name = "Dies ist ein String"
+		# eine Zuweisung erfolgt über den Zuweisungsoperator "="
+		# der Datentyp erfolgt implizit über den Wert (String, Ganze Zahl, Datum) 
+
+	Zeichenkette (String)
+		str = "So und so"
+		str2 = 'es geht auch anders'
+		str3 = String.new("noch anders, ganz professionell")
+		#Eine Zeichenkette muss mit öffnenden und schließenden Anführungszeichen eingegeben werden.
+
+	Ganze Zahl ( integer, Fixnum )
+		zahl = 15
+		# KeinAnführungszeichen
+
+	Float (Kommazahl)
+		komma_zahl = 9.18
+
+_________________________
+_________________________
+
+String Methode:
+
+	Die Programmiersprache RUBY ist streng Klassen/Objekt orientiert. 
+	Das bedeutet, dass eine Variable von Datentyp Integer ein Objekt der Klasse Fixnum ist, usw.
+	Die jeweilige Klasse bietet für das Objekt vorgefertigte Methoden an.
+
+		var = "teststring"
+		var.class
+			die Methode class auf das Objekt angewand gibt die Klasse des Objektes aus.
+		var.reverse
+			Die Anwendung der Methode Reverse erzeugt eine Ausgabe in der der String umgekehrt wird. Der Wert der Variable ändert sich nicht!
+		var.reverse! 
+			Ein ! am Ende einer Methode ändert den Variablen Wert (bleibt für immer so!)
+		var.center(30)
+			Methoden erwarten manchmal einen Parameter (center -->wird zentral in dem Angegebenen Wert plaziert!)
+		var.reverse.center(30)
+			Methoden können kaskadiert werden. die folgende Methode wird auf die Ausgabe der vorherigen angewandt.
+		var.empty?
+			Methoden mit einem ? am Ende geben prinzipiell einen Boolean(true oder Flase) zurück.
+			
+_______________________________________________
+________________________________________________
+
+class Eigenschaften.
+
+Eine Klasse enthält Methoden und Eigenschaften
+Die Eigenschaft charakterisiert ein Objekt.
+In der Klasse selbst ist die Eigenschaft als Instalnzvariable definiert; dh. es kann auf diese Variable nur innerhalb der Klasse zugegriffen werden.
+soll ein zugriff auch von außerhalb erfolgen, dann wird die Instanzvariable zu einer Eigenschaft.
+
+Beispiell und Methoden:
+	a. Methoden definieren:
+			Def title
+				@title
+			End
+			def title=(ptitle)
+				@title = ptitle
+			end
+			#nun kann von außen auf die Eigenschaft title zugegriffen werden.
+			#obj = Movie.new('Batman')
+			#puts obj.title						#gibt den Wert aus
+			#obj.title = "Superman" 	#belegt die Eigenschaft neu.
+
+	b. Shortcuts
+	attr_accessor :title
+		#falls die Eigenschaft sowohl gelesen, als auch geschrieben werden soll
+	
+	attr_reader :title
+		#nur ein Lese_Zugriff
+
+	attr_writer :title
+		#nur ein Schreib_Zugriff.
