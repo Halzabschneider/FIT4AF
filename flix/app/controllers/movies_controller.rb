@@ -1,5 +1,6 @@
 class MoviesController < ApplicationController
 	before_action :set_movie, only: [:show, :edit, :update, :destroy]
+	
 	#before_action :set_sidebar_movies
 
 
@@ -10,6 +11,7 @@ class MoviesController < ApplicationController
 	end
 
 	def show
+		@reviews = Review.where(params[:id])
 	 	#@movie = Movie.find(params[:id ]) wird über die before_action eingefügt
 	end
 
@@ -56,6 +58,8 @@ class MoviesController < ApplicationController
 		def set_movie
 			@movie = Movie.find(params[:id ])
 		end
+		
+
 		#def set_sidebar_movies
 		#	@sidebar_movies = Movies.upcoming
 		#end

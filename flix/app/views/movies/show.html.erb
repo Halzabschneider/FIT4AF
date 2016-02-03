@@ -9,7 +9,31 @@
 <%= @movie.total_gross %>
 <h3>Erscheinungsdatum</h3>
 <%= @movie.released_on %>
+<h3>Reviews</h3>
 
+<table>
+	<thead>
+		<tr>
+		<th>Name</th>
+		<th>Sterne</th>
+		<th>Anzeigen</th>
+		</tr>
+	</thead>
+	<tbody>
+	<% @reviews.each do |review| %>
+		<tr>
+			<td><%= review.name %></td>
+			<td><%= review.stars %></td>
+			<td><%= link_to "<i class='fi-eye icon-blue'></i>".html_safe, movie_review_path(@movie.id, review.id)%></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
 </p>	
-
-<p><%= link_to "Zurück zu allen Filmen", movies_path %> </p>
+<p>
+	<div class= "button-group">
+	<%= link_to "Alle Events anzeigen", movies_path, class: "button" %>
+	<%= link_to "Back", request.referer, class: "button"  %>
+	<%= link_to "Reviews anzeigen", movie_reviews_path(@movie.id), class: "button" %>
+	</div>
+</p>

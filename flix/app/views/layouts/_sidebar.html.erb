@@ -1,1 +1,7 @@
 <h3>Filme!!!</h3>
+
+<ul class="side-nav">
+	<% @sidebar_movies.each do |movie| %>
+			<li><%= link_to movie.title, movie_path(movie.id) %></a></li>		
+	<% end %>
+</ul>

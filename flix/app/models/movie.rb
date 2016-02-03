@@ -1,4 +1,5 @@
 class Movie < ActiveRecord::Base
+	has_many :reviews, dependent: :destroy
 
 	validates :title, :released_on, :rating, presence: { message: "= Bitte den Titel, Erscheinungsdatum und Rating angeben" }
 	validates :total_gross, numericality: { only_integer: true, message: "= Bitte eine positive Zahl oder Null eingeben", greater_than_or_equal_to: 0 }

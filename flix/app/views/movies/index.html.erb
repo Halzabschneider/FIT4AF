@@ -14,6 +14,7 @@
 		<th>Umsatz</th>
 		<th>Beschreibung</th>
 		<th>Erscheinungsdatum</th>
+		<th>Reviews</th>
 		<th>Einzelheiten</th>
 		<th>Bearbeiten</th>
 		<th>Löschen</th>
@@ -29,6 +30,7 @@
 			<td>	<%= format_total_gross(movie) %> </td>
 			<td>	<%= format_movie_description(movie) %> </td>
 			<td>	<%= movie.released_on %> </td>
+			<td>  <%= link_to link_to "<i class='fi-trash icon-red'></i>".html_safe, movie_reviews_path(movie.id) %></td>
 			<td>  <%= link_to "Zeigen", movie_path(movie.id) %></td>
 			<td>	<%= link_to "Bearbeiten", edit_movie_path(movie.id) %></td>
 			<td>	<%= link_to "Löschen", movie_path(movie.id), method: :delete, data: {confirm: "Wirklich löschen"} %></td>
