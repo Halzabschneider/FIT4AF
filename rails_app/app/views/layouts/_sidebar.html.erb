@@ -1,0 +1,10 @@
+<br>
+<h4>Sidebar</h4>
+<br>
+
+<ul class="side-nav">
+	<% @sidebar_events.each do |event| %>
+			<li><%= link_to event.name, event_path(event.id) %></a></li>		
+	<% end %>
+</ul>
+

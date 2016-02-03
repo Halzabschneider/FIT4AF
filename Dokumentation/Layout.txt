@@ -1,0 +1,16 @@
+Es ist üblich für die Darstellungs und Layout ebene in der Webprogrammierung mit css frameworks zu arbeiten. 
+Im Ruby on Rails Umfeld haben sich 2 Frameworks herauskristallisiert:
+	Boottrap-Twitter
+	Foundation
+Um mit Foundation zu arbeiten sind Folgende Schritte notwendig:
+	1. Einbinden der entsprechenden Gems.
+		gem 'foundation-rails'
+		gem 'foundation-icons-sass-rails'
+			group :development do
+				gem 'rails_layout'
+			end
+	2. Nach einem Bundle Install, der die beiden Gems in die app einbindet und die entsprechenden css und Jawascript-Dateien zu Verfügung stellt werden die Foundation notwedigen Dateien erzeugt.
+	Der Befehl lautet:
+		rails g layout:install foundation5 --force
+	3. Nun können anpassungen in der app/assets/css/framework_and_overwrites.scss.css am Layout vorgenommen werden. Die referenz bildet die Dokumentation von zurb-foundation
+		http://foundation.zurb.com/sites/docs/v/5.5.3/components/sidenav.html

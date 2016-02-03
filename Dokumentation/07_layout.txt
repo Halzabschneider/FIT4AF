@@ -1,0 +1,9 @@
+Nutzen Sie für die flix App evenfalls das Foundation-Framework
+
+Passen Sie die Tabellen so in der App an, dass der Hintergrund der ungeraden Zeilenin der Tabelle ein helles blau hat.
+
+Ersetzen Sie die Link Texte zum Anzeigen Löschen Editieren durch Foundation Buttons
+
+Legen sie einen Navigationspunkt an, der auf die Index-Seite der Movies verweist.
+
+Erstellen Sie eine Sidebar auf der Linken seite, in der die Filme Angezeigt werden die mehr als 50 Mio eingespielt haben.
