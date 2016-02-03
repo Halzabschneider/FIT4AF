@@ -5,9 +5,17 @@ class Event < ActiveRecord::Base
 	validates :description,  length: { minimum: 20 }
 	validates :price, numericality: true
 
-	HOW_HEARD_OPTIONS =['Newsletter', 'Blog Post', 'Twitter', 'Web Search', 'Other']
+	
 	def free?
 		self.price.present? && self.price > 0 
+	end
+
+	def spots_left
+		if capacity.zero?
+			0
+		else
+			capacity - registrations.size
+		end
 	end
 
 	def self.upcoming

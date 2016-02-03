@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 	before_action :set_event, only: [:show, :edit, :update, :destroy]
-	before_action :set_sidebar_events
+
 
 	def index
 		@events = Event.all #where("start_at >= ?", Time.now)
@@ -48,7 +48,5 @@ class EventsController < ApplicationController
 		def set_event
 			@event = Event.find(params[:id ])
 		end
-		def set_sidebar_events
-			@sidebar_events = Event.upcoming
-		end
+
 end
